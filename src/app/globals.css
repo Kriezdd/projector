@@ -17,17 +17,27 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #1B1B1B;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-prosto;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  p {
+    @apply font-anonymous;
+  }
+  body {
+    @apply bg-custom-black;
+    @apply text-custom-white
+  };
 }
